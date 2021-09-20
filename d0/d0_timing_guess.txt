@@ -1,0 +1,92 @@
+Code:
+package com.company;
+
+import edu.princeton.cs.algs4.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // number of line segments to plot
+        int n = StdIn.readInt();
+
+        // the function y = sin(x) * 14, sampled at n+1 points
+        // between x = 0 and x = pi
+        double[] x = new double[n+1];
+        double[] y = new double[n+1];
+        for (int i = 0; i <= n; i++) {
+            x[i] = 2 * Math.PI * i / n;
+            y[i] = Math.sin(i) * 14;
+        }
+
+        // rescale the coordinate system
+        StdDraw.setXscale(-10, +10);
+        StdDraw.setYscale(-15, +15);
+
+        // plot the approximation to the function
+        for (int i = 0; i < n; i++) {
+            StdDraw.line(x[i], y[i], x[i+1], y[i+1]);
+        }
+    }
+}
+
+Timing stuff:
+
+timing1:
+	n - time:
+	1  : 0.77s
+	2  : 1.16s
+	4  : 2.19s
+	8  : 3.93s
+	16 : 7,68s
+	32 : 15,14s
+	64 : 30,52s
+
+	1024 / 16 = 64 --> 64 * 7,68 = 491,52 secs
+	1024 / 32 = 32 --> 32 * 15,14s = 484,48 secs
+	1024 / 64 = 16 --> 16 * 30,52s = 488.32 secs
+
+	guess : ~488.11 secs
+
+timing2:
+	n - time:
+	1  : 0,26s
+	2  : 0,44s
+	4  : 1,12s
+	8  : 3,67s
+	16 : 14,05s
+	32 : 56,82s
+	64 : 221,41s
+
+	1024 / 16 = 64 --> 64 * 14,05s  = 899,2
+	1024 / 32 = 32 --> 32 * 56,82s  = 1818.24
+	1024 / 64 = 16 --> 16 * 221,41s = 3542.56
+	
+	guess: ~5500 secs
+
+timing3:
+	n - time:
+	1  : 1,77s
+	2  : 2,53s
+	4  : 3,27s
+	8  : 4,52s
+	16 : 6,38s
+	32 : 8,91s
+	64 : 12,65s
+	
+	Looks like sqrt(x) when put into desmos.com 
+	ration between sqrt(x) and 128 is 1.5454 ISH	
+
+	guess: 32 * 1.5454 = ~49.5 secs
+
+timing4:
+	n - time:
+	1  : 0,30s
+	2  : 0,20s
+	4  : 0,23s
+	8  : 0,34s
+	16 : 34,74s
+	32 : over 3444 sec / DID NOT FINISH 
+
+	Honestly NOT A CLUE
+	
+	guess would be a few years give or take for n = 1024
