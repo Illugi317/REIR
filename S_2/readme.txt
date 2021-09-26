@@ -43,7 +43,17 @@ When we have exhausted the points in the for loops. We go ahead and print out th
  *           and subsegments?
  **********************************************************************/
 
-
+Same as before, we sort the array of points before passing them into the Fast constructor.
+Now we have a double nested for loop. The first one iterates the "origin points" and the inner for loop iterates the "non-origin points"d.
+In the first for loop we do the following:
+Initialize a slope that has NaN as value.
+Next we create an array of all the remaining points and sort them according to their slope to the origin point at hand.
+We create another array called inner_array which will hold the points that have the same slope as p (the origin), this logic will be implemented later in the code.
+Next we hit the inner for loop which iterates over all the sorted points.
+The logic behind our implementation on how we do all the logic of checking wether there are 3 or more points that are collinear to p is explained in detail within the Fast.java.
+Please look at the code for further explanation.
+It is rather hard to explain those parts "briefly".
+The most brief explanation of the logic is that we check if we have three or more consecutive points with the same slope as p and add them to an array and print it out.
 
 
 /**********************************************************************
