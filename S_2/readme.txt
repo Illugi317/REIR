@@ -130,7 +130,13 @@ Sorting:
  *  sentence explaining what each of you contributed.
  **********************************************************************/
 
+We worked on the assignment together.
+We used peer programming to code Point, Brute and Fast.
+The Point and Brute classes worked out pretty well but Fast was a bit harder.
+During our Fast implementation we tried solving the Fast class seperately to get fresh perspectives because we weren't able to solve it easily.
 
+What we contributed:
+Both of us contributed to the assignemnt equally but Illugi found out a solution to Fast before Pétur.
 
 
 

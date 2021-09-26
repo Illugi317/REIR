@@ -66,8 +66,10 @@ public class Brute {
     public static void main(String[] args) {
         String input_from_S2_main_1 = "input_from_S2_main_2";
         // String input48
+        String input = "generator/1000.txt";
 
-        In in = new In(input_from_S2_main_1);
+
+        In in = new In(input);
         Out out = new Out();
         int n = in.readInt();
         Point[] points = new Point[n];
@@ -77,7 +79,9 @@ public class Brute {
         }
         //Point[] points_sorted = Arrays.stream(points).sorted();
         Arrays.sort(points);
+        Stopwatch watch_boi = new Stopwatch();
         Brute brute_boi = new Brute(points);
+        System.out.println(watch_boi.elapsedTime());
         //System.out.println(n);
 
     }

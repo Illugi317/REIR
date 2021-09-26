@@ -1,6 +1,7 @@
 package com.company;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Out;
+import edu.princeton.cs.algs4.Stopwatch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -123,9 +124,10 @@ public class Fast {
 
     public static void main(String[] args){
         String input_from_S2_main_1 = "input_from_S2_main_2";
+        String input_500 = "generator/4000.txt";
         // String input48
 
-        In in = new In(input_from_S2_main_1);
+        In in = new In(input_500);
         // In in = new In();
         Out out = new Out();
         int n = in.readInt();
@@ -136,6 +138,8 @@ public class Fast {
         }
         //Point[] points_sorted = Arrays.stream(points).sorted();
         Arrays.sort(points);
+        Stopwatch watch_boi = new Stopwatch();
         Fast fast_boi = new Fast(points);
+        System.out.println(watch_boi.elapsedTime());
     }
 }
