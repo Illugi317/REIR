@@ -15,8 +15,7 @@ public class Point implements Comparable<Point> {
     public final int x, y;
 
     // compare points by slope
-    public final Comparator<Point> SLOPE_ORDER = new Comparator<Point>() {
-        @Override
+    public final Comparator<Point> SLOPE_ORDER = new Comparator<Point>(){
         public int compare(Point point_1, Point point_2) {
             double slope_1 = slopeTo(point_2);
             double slope_2 = slopeTo(point_1);
@@ -46,7 +45,19 @@ public class Point implements Comparable<Point> {
     public double slopeTo(Point that) {
         /* TODO: Implement this */
         // Cast integers into floating point to get floating point division
-        return (double)(that.y - this.y) /(that.x - this.x);
+        //return (double)(this.y - that.y) /(this.x - that.x);
+        if (this.x == that.x && this.y == that.y){
+            return Double.NEGATIVE_INFINITY;
+        }
+        else if(this.x == that.x){
+            return Double.POSITIVE_INFINITY;
+        }
+        else if(this.y == that.y){
+            return 0;
+        }
+        else{
+            return (double)(this.y - that.y) /(this.x - that.x);
+        }
     }
 
     /**
@@ -54,10 +65,12 @@ public class Point implements Comparable<Point> {
      * y-coordinates and breaking ties by x-coordinates
      */
     public int compareTo(Point that) {
-        // TODO: Implement this
-        if (this.y < that.y || this.x < that.x) return -1;
-        else if(this.x > that.x || this.y > that.y) return 1;
-        else return 0;
+        if (this.y < that.y) return -1;
+        if (this.y > that.y) return 1;
+        if (this.x < that.x) return -1;
+        if (this.x > that.x) return 1;
+
+        return 0;
     }
 
     // return string representation of this point
@@ -70,7 +83,8 @@ public class Point implements Comparable<Point> {
         /*
          * Do not modify
          */
-        In in = new In("input_from_S2_main_1");
+        // In in = new In("input_from_S2_main_1");
+        In in = new In();
         Out out = new Out();
         int n = in.readInt();
         Point[] points = new Point[n];
