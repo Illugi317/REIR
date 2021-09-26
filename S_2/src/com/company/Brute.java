@@ -1,10 +1,9 @@
 package com.company;
 import edu.princeton.cs.algs4.*;
 
-import java.sql.Array;
-import java.util.LinkedList;
 import java.util.ArrayList;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 public class Brute {
     public Brute(Point[] point_array) {
         List<ArrayList<Point>> big_list_boi = new ArrayList<ArrayList<Point>>();
@@ -79,7 +78,7 @@ public class Brute {
         //Point[] points_sorted = Arrays.stream(points).sorted();
         Arrays.sort(points);
         Brute brute_boi = new Brute(points);
-        System.out.println(n);
+        //System.out.println(n);
 
     }
 }
