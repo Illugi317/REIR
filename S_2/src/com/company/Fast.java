@@ -123,12 +123,12 @@ public class Fast {
 
 
     public static void main(String[] args){
-<<<<<<< HEAD
-        String input_from_S2_main_1 = "300.txt";
-=======
+
+        // String input_from_S2_main_1 = "300.txt";
+
         String input_from_S2_main_1 = "input_from_S2_main_2";
         String input_500 = "generator/4000.txt";
->>>>>>> 9456ac2b7cea8aceb9cf1dd001027c1c462992ce
+
         // String input48
 
         In in = new In(input_500);
@@ -142,14 +142,10 @@ public class Fast {
         }
         //Point[] points_sorted = Arrays.stream(points).sorted();
         Arrays.sort(points);
-<<<<<<< HEAD
-        Stopwatch a = new Stopwatch();
-        Fast fast_boi = new Fast(points);
-        System.out.println(a.elapsedTime());
-=======
+
         Stopwatch watch_boi = new Stopwatch();
         Fast fast_boi = new Fast(points);
         System.out.println(watch_boi.elapsedTime());
->>>>>>> 9456ac2b7cea8aceb9cf1dd001027c1c462992ce
+
     }
 }
