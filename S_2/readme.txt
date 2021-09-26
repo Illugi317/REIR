@@ -74,7 +74,7 @@ The most brief explanation of the logic is that we check if we have three or mor
     200        ~5.438s   ~0.041s
     300        ~24.181s  ~0.069s
     400        ~71s      ~0.149s
-   1000        >35min    ~0.491s
+   1000        ~51min    ~0.491s
    1600        ~DNF      ~0.788s
    3000        ~DNF      ~2.434s
    6000        ~DNF      ~8.453s
