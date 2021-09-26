@@ -16,10 +16,15 @@ public class Point implements Comparable<Point> {
 
     // compare points by slope
     public final Comparator<Point> SLOPE_ORDER = new Comparator<Point>(){
+        /*We create a new comparator to compare the slopes bwtween two points.
+        We calculate the slope from our point to point 1 and for point 2.
+        Then we return -1, 0 or 1 depending of if slope_1 is bigger or smaller than slope_2.
+        We wrote 2 if statements and one else statement and then intellij said we could use this Double.compare, we are not sure if we are allowed to use this.
+        */
         public int compare(Point point_1, Point point_2) {
             double slope_1 = slopeTo(point_2);
             double slope_2 = slopeTo(point_1);
-            return Double.compare(slope_2, slope_1);
+            return Double.compare(slope_2, slope_1); //Intellij made me do this
         }
     };
 
@@ -43,19 +48,22 @@ public class Point implements Comparable<Point> {
 
     // slope between this point and that point
     public double slopeTo(Point that) {
-        /* TODO: Implement this */
-        // Cast integers into floating point to get floating point division
-        //return (double)(this.y - that.y) /(this.x - that.x);
+        //We kinda bruteforced this by seeing the mooshak results
         if (this.x == that.x && this.y == that.y){
+            //If the X values and the Y values are identical, return NEG_INF, aka (0/0)
             return Double.NEGATIVE_INFINITY;
         }
         else if(this.x == that.x){
+            //If the x values are identical return POS_INF, aka (y1-y2)/0
             return Double.POSITIVE_INFINITY;
         }
         else if(this.y == that.y){
+            //If the y values are identical return zero, since if the numerator is zero we get zero
             return 0;
         }
         else{
+            // If we pass thoes tests we simply calculate the actual slope and return it.
+            // Cast integers into floating point to get floating point division
             return (double)(this.y - that.y) /(this.x - that.x);
         }
     }
@@ -65,7 +73,11 @@ public class Point implements Comparable<Point> {
      * y-coordinates and breaking ties by x-coordinates
      */
     public int compareTo(Point that) {
-        if (this.y < that.y) return -1;
+        /*We went after what we got in the problem description
+        We first check the y values and then we use the x values to break ties.
+        if it's the same point we simply return 0
+        */
+        if (this.y < that.y) return -1; 
         if (this.y > that.y) return 1;
         if (this.x < that.x) return -1;
         if (this.x > that.x) return 1;
