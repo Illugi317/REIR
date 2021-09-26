@@ -4,15 +4,15 @@
 
 Name:             
 Login:            
-Hópur:
+Group:
 
-Partner name:     
-Partner login:    
-Partner hópur:
+Partner name:     PÃ©tur Steinn GuÃ°mundsson
+Partner login:    petursg20
+Partner group:    1
 
-Username of the student submitting to Mooshak: 
+Username of the student submitting to Mooshak: petursg20
 
-Hours to complete assignment (optional):
+Hours to complete assignment (optional): Too many.
 
 
 
@@ -22,6 +22,18 @@ Hours to complete assignment (optional):
  *           slopeTo() methods in the Point data type.
  **********************************************************************/
 
+First of all before we pass the points into the Brute class, we start by sorting our points using the comparator we implemented in Point.java.
+When the Brute class is initiated we create a big_list_boi ArrayList which holds subarrays of points that are collinear.
+Next we do a quadratic for loop which iterates over all the sorted points in the array given in the constructor.
+In the most-inner for loop we do the following checks:
+check_order(point_a, point_b, point_c, point_d)
+The points given to this method are taken from the outer for loops.
+What check_order does is that it checks if these points are worth looking at, it simply does the lexicographic check of a,b,c,d.
+Point a needs to be beneith or left to point b, point b needs to be beneith or left to point c, and point c needs to be beneith or left to point d.
+If this is true then we make sure to check their slopes with the check_slope() method.
+If that method returns true, meaning the slope of all the 4 points match we do the following:
+Create an array with those four points and add them to the big_list_boi array.
+When we have exhausted the points in the for loops. We go ahead and print out the big_list_boi which has the results.
 
 
 
