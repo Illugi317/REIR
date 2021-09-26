@@ -1,6 +1,7 @@
 package com.company;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Out;
+import edu.princeton.cs.algs4.Stopwatch;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -76,7 +77,7 @@ public class Fast {
                     if (inner_array.size() >= 3) {
                         // If we did, then we add our origin point p to the start of the array and print it out
                         inner_array.add(0,p);
-                        print_collinear(inner_array, p);
+                        //print_collinear(inner_array, p);
                     }
                     // We empty the array for one of two reasons
                     // Either we printed out all the collinear points and we are moving on to the next slope
@@ -105,7 +106,7 @@ public class Fast {
             // we print them out
             if (inner_array.size() >= 3) {
                 inner_array.add(0,p);
-                print_collinear(inner_array, p);
+                //print_collinear(inner_array, p);
             }
         }
     }
@@ -122,7 +123,7 @@ public class Fast {
 
 
     public static void main(String[] args){
-        String input_from_S2_main_1 = "input_from_S2_main_2";
+        String input_from_S2_main_1 = "300.txt";
         // String input48
 
         In in = new In(input_from_S2_main_1);
@@ -136,6 +137,8 @@ public class Fast {
         }
         //Point[] points_sorted = Arrays.stream(points).sorted();
         Arrays.sort(points);
+        Stopwatch a = new Stopwatch();
         Fast fast_boi = new Fast(points);
+        System.out.println(a.elapsedTime());
     }
 }

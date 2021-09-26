@@ -70,20 +70,20 @@ The most brief explanation of the logic is that we check if we have three or mor
     
       N       brute       sorting
  ---------------------------------
-    150
-    200
-    300
-    400
-    800
-   1600
-   3200
-   6400
-  12800
+    100        ~0.486s   ~0.015s
+    200        ~5.438s   ~0.041s
+    300        ~24.181s  ~0.069s
+    400        ~71s      ~0.149s
+   1000        >35min    ~0.491s
+   1600        ~DNF      ~0.788s
+   3000        ~DNF      ~2.434s
+   6000        ~DNF      ~8.453s
+  14500        ~DNF      ~50.868s
 
 
-Brute:    ~
+Brute:    ~ 5.2316 * 10 ^-8 * N^3.484
 
-Sorting:  ~
+Sorting:  ~ 1.8831 * 10 ^-5 * N^1.4506
 
 
 
@@ -105,7 +105,7 @@ Sorting:
  *  out different representations of the same line segment when there
  *  are 5 or more points on a line segment, indicate that here.
  **********************************************************************/
-
+None are known.
 
 
 /**********************************************************************
@@ -114,13 +114,13 @@ Sorting:
  *  include any help from people (including course staff, lab TAs,
  *  classmates, and friends) and attribute them by name.
  **********************************************************************/
-
+We got a little hint from our calssmates. it was about using Arrays.stream to sort the array according to the point of p.SLOPE_ORDER
 
 
 /**********************************************************************
  *  Describe any serious problems you encountered.                    
  **********************************************************************/
-
+Depression
 
 
 

@@ -64,7 +64,7 @@ public class Brute {
     }
 
     public static void main(String[] args) {
-        String input_from_S2_main_1 = "input_from_S2_main_2";
+        String input_from_S2_main_1 = "300.txt";
         // String input48
 
         In in = new In(input_from_S2_main_1);
@@ -77,7 +77,9 @@ public class Brute {
         }
         //Point[] points_sorted = Arrays.stream(points).sorted();
         Arrays.sort(points);
+        Stopwatch a = new Stopwatch();
         Brute brute_boi = new Brute(points);
+        System.out.println(a.elapsedTime());
         //System.out.println(n);
 
     }
