@@ -2,9 +2,9 @@
  *  Pattern Recognition readme.txt template
  **********************************************************************/
 
-Name:             
-Login:            
-Group:
+Name:             Illugi Breki Finnsson
+Login:            illugif
+Group:            1
 
 Partner name:     Pétur Steinn Guðmundsson
 Partner login:    petursg20
@@ -75,10 +75,10 @@ The most brief explanation of the logic is that we check if we have three or mor
     300        ~24.181s  ~0.069s
     400        ~71s      ~0.149s
    1000        ~51min    ~0.491s
-   1600        ~DNF      ~0.788s
-   3000        ~DNF      ~2.434s
-   6000        ~DNF      ~8.453s
-  14500        ~DNF      ~50.868s
+   1600        ~...      ~0.788s
+   3000        ~...      ~2.434s
+   6000        ~...      ~8.453s
+  14500        ~...      ~50.868s
 
 
 Brute:    ~ 5.2316 * 10 ^-8 * N^3.484
@@ -94,9 +94,9 @@ Sorting:  ~ 1.8831 * 10 ^-5 * N^1.4506
  *                your answer briefly.
  **********************************************************************/
 
-Brute:
+Brute: O(N^4) because we have 4 independent for loops which are nested and the operations inside the inner-most for loop are all constant time.
 
-Sorting:
+Sorting: O(N^2*log(N)) because the two nested for loops are N^2 but then we have the sorting of points inside the outer for loop which takes N*log(N).
 
 
 
@@ -114,7 +114,7 @@ None are known.
  *  include any help from people (including course staff, lab TAs,
  *  classmates, and friends) and attribute them by name.
  **********************************************************************/
-We got a little hint from our calssmates. it was about using Arrays.stream to sort the array according to the point of p.SLOPE_ORDER
+We got a little hint from our classmates. it was about using Arrays.stream to sort the array according to the point of p.SLOPE_ORDER
 
 
 /**********************************************************************
@@ -133,13 +133,10 @@ No serious problems.
 We worked on the assignment together.
 We used peer programming to code Point, Brute and Fast.
 The Point and Brute classes worked out pretty well but Fast was a bit harder.
-During our Fast implementation we tried solving the Fast class seperately to get fresh perspectives because we weren't able to solve it easily.
+During our Fast implementation we tried solving the Fast class separately to get fresh perspectives because we weren't able to solve it easily.
 
 What we contributed:
-Both of us contributed to the assignemnt equally but Illugi found out a solution to Fast before Pétur.
-
-
-
+Both of us contributed to the assignment equally but Illugi found out a solution to Fast before Pétur.
 
 
 /**********************************************************************
@@ -147,3 +144,5 @@ Both of us contributed to the assignemnt equally but Illugi found out a solution
  *  on how much you learned from doing the assignment, and whether    
  *  you enjoyed doing it.                                             
  **********************************************************************/
+
+It was fun!
